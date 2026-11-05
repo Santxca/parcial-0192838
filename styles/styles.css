@@ -1,0 +1,373 @@
+/* Reseteo de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   Barra de Navegación
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #e62429;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navbar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #e62429;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 25px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   Sección Principal (Hero)
+   ========================================= */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 120px 60px 40px;
+    background-color: #000000;
+}
+
+.bg-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3b0000; /* Color de respaldo rojizo si la imagen falla */
+    /* IMPORTANTE: Si tu CSS está en una carpeta, cambia la ruta a url('../assets/fondo.png') */
+    background-image: url('../assets/fondo.png'); 
+    background-size: cover;
+    background-position: center top;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Arreglo de los nombres unificados */
+.cast-names {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    z-index: 5;
+    position: relative;
+}
+
+.cast-group {
+    display: flex;
+    gap: 30px; /* Esta es la separación forzada entre Andrew y Zendaya */
+}
+
+.hero-center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    z-index: 5;
+    margin: 15px 0;
+}
+
+.title-bg, .title-outline {
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14vw; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.title-bg {
+    color: #ffffff;
+    z-index: 2;
+}
+
+.character-img {
+    position: relative;
+    z-index: 3;
+    height: 120%;
+    max-height: 550px;
+    object-fit: contain;
+}
+
+.title-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+    z-index: 4;
+    pointer-events: none;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    z-index: 5;
+    position: relative;
+}
+
+.info-text {
+    max-width: 380px;
+}
+
+.info-text h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.info-text p {
+    font-size: 0.85rem;
+    color: #cccccc;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.btn-book {
+    display: inline-block;
+    padding: 10px 35px;
+    border: 1.5px solid #ffffff;
+    border-radius: 25px; 
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* =========================================
+   Separador (Línea roja punteada)
+   ========================================= */
+.divider-container {
+    background-color: #e62429;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.divider {
+    width: 100%;
+    height: 4px;
+    background-image: repeating-linear-gradient(to right, #ffffff, #ffffff 10px, transparent 10px, transparent 20px);
+}
+
+/* =========================================
+   Sección Calificaciones y Footer
+   ========================================= */
+.rating-footer-section {
+    position: relative;
+    background-color: #000000;
+}
+
+.bg-web-footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mismo asunto con la ruta del fondo aquí */
+    background-image: url('assets/fondo.png'); 
+    background-size: cover;
+    background-position: center bottom;
+    opacity: 0.5; 
+    z-index: 1;
+    pointer-events: none;
+}
+
+.rating-container {
+    padding: 40px 60px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.rating-container h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.rating-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.site {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: #000000;
+}
+
+.red-border {
+    border: 3px solid #e62429;
+}
+
+.white-border {
+    border: 3px solid #ffffff;
+}
+
+.movie-logo-container {
+    margin: 20px auto 40px;
+    max-width: 300px;
+}
+
+.movie-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   Pie de Página (Footer) Textos
+   ========================================= */
+footer {
+    padding: 0 60px 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #bbbbbb;
+}
+
+.footer-column.review, .footer-column.spoiler {
+    border-left: 2px solid #e62429;
+    padding-left: 20px;
+}
+
+/* =========================================
+   Responsividad (Móviles / Tablets)
+   ========================================= */
+@media (max-width: 900px) {
+    .cast-names { font-size: 1rem; }
+    .hero-center { height: 40vh; }
+    .title-bg, .title-outline { font-size: 16vw; }
+    .character-img { height: 100%; }
+    .ratings { gap: 40px; }
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 20px 30px; }
+    .navbar nav ul { display: none; }
+    
+    .hero { padding: 100px 30px 30px; }
+    
+    .cast-names {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .info-text { max-width: 100%; }
+    
+    .ratings { flex-direction: row; flex-wrap: wrap; gap: 30px; }
+    
+    .footer-content { flex-direction: column; gap: 30px; }
+}
